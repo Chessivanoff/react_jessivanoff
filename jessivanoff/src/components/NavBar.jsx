@@ -1,6 +1,6 @@
 import CartWidget from "./CartWidget"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {faCartArrowDown, faCoffee, faWineGlass } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
     return (
@@ -24,8 +24,8 @@ const NavBar = () => {
             </nav>
 
             <button className="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-red-700 hover:text-gray-100 rounded text-base mt-4 md:mt-0">
-              <span>Mi Compraaa
-                <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
+              <span> 
+                <FontAwesomeIcon icon={faCartArrowDown}></FontAwesomeIcon>
               </span>
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
