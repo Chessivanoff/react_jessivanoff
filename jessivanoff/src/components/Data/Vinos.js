@@ -1,4 +1,4 @@
-export default vinos = [
+export const vinos = [
     {cepa: 'malbec', año:'2018'},
     {cepa: 'chardonnay', año:'2020'},
     {cepa: 'malbec blanco', año:'2022'},

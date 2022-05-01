@@ -1,16 +1,34 @@
-import { vinos} from "/data/vinos";
+import { useEffect, useState } from "react";
+import { vinos as vinosData } from "./Data/Vinos";
+import VinosCard from "./VinosCard";
+
 
 const ItemList = ( {} ) => {
+
+        const [vinos, setVinos] = useState([])
+
+useEffect (() => {
+       
+}, [])
+
+
+const getVinos = new Promise (  (resolve, reject) => { 
+        setTimeout (  ()  =>{
+                resolve (vinosData)
+        }, 1000)
+})
+
+getVinos.then( (result) => {
+        console.log('Se completo la promesa', result);
+
+} )
+
+
         return (
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                         </a>
-                                <div class="mt-4">
-                                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">TINTOS</h3>
-                                         <h2 class="text-gray-900 title-font text-lg font-medium">Malbec 1</h2>
-                                         <p class="mt-1">$16.00</p>
-                                </div>
-                 </div>
+
+<div>
+        {vinos.map( vino => <VinosCard vinosData={vino} /> ) }
+</div>
 
 
 
@@ -18,5 +36,4 @@ const ItemList = ( {} ) => {
                 )
         }
         export default ItemList
-
             
