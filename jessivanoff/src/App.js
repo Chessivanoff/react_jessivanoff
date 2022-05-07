@@ -3,6 +3,7 @@ import './App.css';
 import VinosListContainer from './components/VinosListContainer';
 import NavBar from './components/NavBar';
 import ItemList from './components/ItemList';
+import VinoDetailPage from './components/VinoDetailPage';
 //import CartWidget from './components/CartWidget';
 
 
@@ -10,24 +11,23 @@ import ItemList from './components/ItemList';
 
 function App() {
   return (
-    <><NavBar/><VinosListContainer greeting='¿Cómo estás?'/>
 
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Página en construcción.
-        </p>
-        <p>
-          Pronto podrás comprar vinos, espumantes y regalos aquí
-        </p>
+    <>
+    
+    <BrowserRouter>
+    
+    <NavBar></NavBar>
+    <VinosListContainer greeting='¿Cómo estás?'></VinosListContainer>
 
-        <ItemList/>
-
-       
-      </header>
-    </div></>
-   )
+    <Routes>
+      <Route> path='/components/' element={<VinosListContainer></VinosListContainer>}</Route>
+      <Route path='/components/:vinoId' element={<VinoDetailPage></VinoDetailPage>}</Route>
+    </Routes>
+    
+    </BrowserRouter>
+    
+    </>
+   );
 }
 
 export default App
