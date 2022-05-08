@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { vinos as vinosData } from "./Data/Vinos";
-import VinosCard from "./VinosCard";
+import VinosCard from "./VinosCard_Tintos";
 
 
 const ItemList = ( {} ) => {

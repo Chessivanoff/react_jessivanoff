@@ -14,17 +14,16 @@ function App() {
 
     <>
     
-    <BrowserRouter>
+
     
     <NavBar></NavBar>
     <VinosListContainer greeting='¿Cómo estás?'></VinosListContainer>
 
-    <Routes>
-      <Route> path='/components/' element={<VinosListContainer></VinosListContainer>}</Route>
-      <Route path='/components/:vinoId' element={<VinoDetailPage></VinoDetailPage>}</Route>
-    </Routes>
-    
-    </BrowserRouter>
+
+      <Route path ='/components/' element={<VinosListContainer></VinosListContainer>}></Route>
+      <Route path ='/components/:vinoId' element={<VinoDetailPage></VinoDetailPage>}></Route>
+
+
     
     </>
    );

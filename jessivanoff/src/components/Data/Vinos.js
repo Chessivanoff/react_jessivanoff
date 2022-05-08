@@ -1,10 +1,13 @@
 export const vinos = [
-    {cepa: 'malbec', año:'2018'},
-    {cepa: 'chardonnay', año:'2020'},
-    {cepa: 'malbec blanco', año:'2022'},
-    {cepa: 'sauvignon blanc', año:'2018'},
-    {cepa: 'chenin blanc', año:'2017'},
-    {cepa: 'semillon', año:'2020'},
+    {id:"001", cepa: 'malbec', año:'2018'},
+    {id:"002", cepa: 'malbec', año:'2020'},
+    {id:"003", cepa: 'malbec', año:'2022'},
+    {id:"004", cepa: 'chardonnay', año:'2018'},
+    {id:"005", cepa: 'chardonnay', año:'2017'},
+    {id:"006", cepa: 'chardonnay', año:'2020'},
+    {id:"007", cepa: 'rosado', año:'2020'},
+    {id:"008", cepa: 'rosado', año:'2020'},
+    {id:"009", cepa: 'rosado', año:'2020'},
 
 ]
    
