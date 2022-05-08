@@ -4,6 +4,7 @@ import VinosListContainer from './components/VinosListContainer';
 import NavBar from './components/NavBar';
 import ItemList from './components/ItemList';
 import VinoDetailPage from './components/VinoDetailPage';
+import { BrowserRouter } from 'react-router-dom';
 //import CartWidget from './components/CartWidget';
 
 
@@ -14,14 +15,14 @@ function App() {
 
     <>
     
-
-    
     <NavBar></NavBar>
     <VinosListContainer greeting='¿Cómo estás?'></VinosListContainer>
 
-
-      <Route path ='/components/' element={<VinosListContainer></VinosListContainer>}></Route>
+<BrowserRouter>
+      <Route path ='/' element={<VinosListContainer></VinosListContainer>}></Route>
+      <Route path ='/components/:listId' element={<VinosListContainer></VinosListContainer>}></Route>
       <Route path ='/components/:vinoId' element={<VinoDetailPage></VinoDetailPage>}></Route>
+</BrowserRouter>
 
 
     
@@ -30,3 +31,4 @@ function App() {
 }
 
 export default App
+
