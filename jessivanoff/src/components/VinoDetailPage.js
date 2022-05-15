@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import {useParans} from "react-router-dom"
+import {useParams} from "react-router-dom"
 
 const VinoDetailPage = () => {
 
-    const {vinoId} = useParans()
+    const {vinoId} = useParams()
     const [vinos, setvinos] = useState ( {} )
 
     useEffect (  () => {
@@ -46,9 +46,10 @@ const VinoDetailPage = () => {
   </div>
 </section>
 
-    </div>
 
-    </>
+
+</>
+    
   )
 }
 

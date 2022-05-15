@@ -2,8 +2,12 @@ import vino7 from '.IMG/vino7.jpg';
 import vino8 from '.IMG/vino8.jpg';
 import vino9 from '.IMG/vino9.jpg';
 import { BrowserRouter } from 'react-router-dom';
+import { CartContext } from './CartContext';
 
 const VinosCard_Blancos = ( props ) => {
+
+    const { addCompra, removeCompra, clearCompra,  } = useContext(CartContext)
+
     return (
 
         <><div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -20,7 +24,14 @@ const VinosCard_Blancos = ( props ) => {
                             <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                                     <BrowserRouter>
                                         <Route OnClick path ='/item/:id'></Route>
-                                        </BrowserRouter>Ver</button>
+                                        </BrowserRouter>Ver
+                            </button>
+                            <button onClick={addCompra} className="btn">Agregar al carrito
+                            </button>
+                            <button onClick={removeCompra} className="btn">Quitar del carrito
+                            </button>
+                            <button onClick={clearCompra} className="btn">Eliminar compra
+                            </button>
                     </div>
 
             </div><div class="lg:w-1/4 md:w-1/2 p-4 w-full">
